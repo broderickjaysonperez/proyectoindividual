@@ -1,135 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="262dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Recetas con  Link"
-        android:textColor="#F7141414"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtid"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.514" />
-
-    <EditText
-        android:id="@+id/txtid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="72dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Ingrese el codigo"
-        app:layout_constraintBottom_toTopOf="@+id/txtreceta"
-        app:layout_constraintEnd_toStartOf="@+id/btnbuscar"
-        app:layout_constraintHorizontal_bias="0.351"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnbuscar"
-        android:layout_width="124dp"
-        android:layout_height="49dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="Buscar "
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="178dp" />
-
-    <EditText
-        android:id="@+id/txtreceta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="            Ingrese receta"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnbuscar" />
-
-    <EditText
-        android:id="@+id/txtlink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="          Ingrese el Link"
-        app:layout_constraintBottom_toTopOf="@+id/btnagregar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtreceta"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btnagregar"
-        android:layout_width="160dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="28dp"
-        android:text="AGREGAR"
-        app:layout_constraintBottom_toTopOf="@+id/btneditar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btneditar"
-        android:layout_width="163dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="44dp"
-        android:text="EDITAR"
-        app:layout_constraintBottom_toTopOf="@+id/btneliminar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btneliminar"
-        android:layout_width="155dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="44dp"
-        android:text="ELIMINAR"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
-        app:layout_constraintStart_toStartOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_marginBottom="15dp" android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp" android:layout_marginRight="15dp">
+        <TextView
+                android:text="RECETAS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView4" android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp" android:gravity="center" android:textSize="24sp"/>
+        <TextView
+                android:text="CODIGO:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView5"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/txtcodigo"/>
+        <TextView
+                android:text="RECETA:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView6"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/txtreceta" android:layout_marginBottom="10dp"/>
+        <TextView
+                android:text="LINK:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView7"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/txtlink" android:layout_marginBottom="10dp"/>
+        <Button
+                android:text="AGREGAR"
+                android:layout_width="match_parent"
+                android:layout_height="65dp" android:id="@+id/btnagregar" android:layout_marginTop="25dp"/>
+        <Button
+                android:text="EDITAR"
+                android:layout_width="match_parent"
+                android:layout_height="66dp" android:id="@+id/btneditar" android:layout_marginTop="25dp"/>
+        <Button
+                android:text="ELIMINAR"
+                android:layout_width="match_parent"
+                android:layout_height="59dp" android:id="@+id/btneliminar" android:layout_marginTop="25dp"/>
+        <Button
+                android:text="MOSTRAR"
+                android:layout_width="match_parent"
+                android:layout_height="77dp" android:id="@+id/btnmostrar"
+                android:layout_alignStart="@+id/null" android:layout_marginTop="25dp"/>
+    </LinearLayout>
+</RelativeLayout>
